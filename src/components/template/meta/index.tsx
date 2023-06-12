@@ -9,7 +9,7 @@ export interface MetaI {
 export default function Meta( { pageName, description = `Gia Bao Tran's personal site` } : MetaI ) {
 
   const siteName = 'Gia Bao Tran';
-  const siteUrl = 'https://www.giabaotran.dev';
+  const siteUrl = 'https://tool.giabaotran.dev';
   const ogImage = ''; // TODO
 
   return (

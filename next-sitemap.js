@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.giabaotran.dev',
+  siteUrl: 'https://tool.giabaotran.dev',
   generateRobotsTxt: true,
   generateIndexSitemap: true
 };
