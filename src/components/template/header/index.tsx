@@ -14,7 +14,7 @@ export const Header = ( { absoluteHeader = false } : HeaderModel ) => {
 
   return (
     <header className={ cn( 'header', { 'header-absolute': absoluteHeader } ) }>
-      <Link className='header__image-wrapper' href='/' scroll={ false }>
+      <Link className='header__image-wrapper' href={ process.env.NEXT_PUBLIC_MAIN_SITE || '/' } scroll={ false }>
         <a onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Gia Bao Tran</a>
       </Link>
       <div className='header__navigation-bar'>
