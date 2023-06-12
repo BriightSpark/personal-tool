@@ -11,7 +11,7 @@ export default function Index( { preview }: { preview: any} ) {
   const { t } = useTranslation();
   return (
     <>
-      <LandingLayout preview={ preview } meta={{ pageName: t( 'meta--game-tool' ) }}>
+      <LandingLayout preview={ preview } meta={{ pageName: t( 'meta--game-tools' ) }}>
         <Container>
           <h2>{ t( 'game-on' ) }</h2>
           <Link href={ '/game/password-guesser' } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Password Guesser</Link>
