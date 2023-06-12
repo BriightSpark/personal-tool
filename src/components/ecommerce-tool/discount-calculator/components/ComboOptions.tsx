@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { useWatch } from 'react-hook-form';
 
-import { Checkbox, Input, Button } from 'components/_core';
+import { Checkbox, Input } from 'components/_core';
+import { Button } from '@briightspark/ui-components';
 
 interface IComboOption {
   name: string
@@ -38,8 +39,8 @@ const ComboOption = ( { name } : IComboOption ) => {
           { inputs }
         </div>
         <div className='combo-options__controls'>
-          <Button type='button' label={ t( 'add-more--combo' ) } onClicked={ () => setAmountOfItem( amountOfItem + 1 ) } />
-          <Button type='button' label={ t( 'remove-one--combo' ) } onClicked={ () => setAmountOfItem( amountOfItem - 1 ) } />
+          <Button type='button' onClick={ () => setAmountOfItem( amountOfItem + 1 ) }>{ t( 'add-more--combo' ) }</Button>
+          <Button type='button' onClick={ () => setAmountOfItem( amountOfItem - 1 ) }>{ t( 'remove-one--combo' ) }</Button>
         </div>
         { comboItemTotalPrice !== price && <p className='combo-options__error'>{ t( 'unmatch-combo-price' ) }</p> }
       </>

@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { useWatch } from 'react-hook-form';
 
 import ItemInput from './ItemInput';
-import { Button } from 'components/_core';
+import { Button } from '@briightspark/ui-components';
 
 const ItemInputList = ( { fields, append, remove } : any ) => {
   const [amountOfItem, setAmountOfItem] = useState < number >( 1 );
@@ -34,11 +34,13 @@ const ItemInputList = ( { fields, append, remove } : any ) => {
         />;
       } ) }
       <div className='combo-options__controls'>
-        <Button type='button' label={ t( 'add-more' ) } onClicked={ () => {
+        <Button type='button' onClick={ () => {
           append( { price: 0, quantity: 1, isCombo: false } );
           setAmountOfItem( amountOfItem + 1 );
         } }
-        />
+        >
+          { t( 'add-more' ) }
+        </Button>
       </div>
     </div>
   );

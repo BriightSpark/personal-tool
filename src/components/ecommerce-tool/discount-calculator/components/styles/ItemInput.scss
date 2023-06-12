@@ -4,7 +4,7 @@
   }
 
   .item-input {
-    @apply flex flex-col gap-5;
+    @apply flex flex-col items-center gap-5;
     @apply md:flex-row;
 
     &__text {

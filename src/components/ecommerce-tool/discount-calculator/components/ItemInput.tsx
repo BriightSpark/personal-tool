@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { Checkbox, Input } from 'components/_core';
 import ComboOption from './ComboOptions';
 import { useWatch } from 'react-hook-form';
+import { Button } from '@briightspark/ui-components';
 
 interface IItemInput {
   index: number
@@ -42,7 +43,7 @@ const ItemInput = ( { index, rmCallback = () => {} } : IItemInput ) => {
             staticLabel
           />
         </div>
-        <button className='item-input__remove' type='button' onClick={ () => rmCallback() }>X</button>
+        <Button className='item-input__remove' type='button' fill={ 'outlined' } onClick={ () => rmCallback() }>X</Button>
       </div>
       { !!isCombo &&
         <>
