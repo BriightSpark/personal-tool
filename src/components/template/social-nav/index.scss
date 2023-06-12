@@ -1,0 +1,32 @@
+.social-navigation {
+  @apply relative z-50;
+  @apply md:fixed md:left-0 md:bottom-0 md:z-50 md:mb-2 md:bg-transparent;
+
+  .social-navigation__bar {
+    @apply flex py-5 justify-center;
+    @apply md:inline-block md:p-0 md:list-none;
+
+    .social-navigation__icon {
+      &:not(:last-child) {
+        @apply mr-5;
+        @apply md:mb-3;
+      }
+
+      .social-navigation__icon-link {
+        @apply block px-1 cursor-pointer;
+        
+        svg {
+          @apply h-5 w-5 fill-primary transition-all ease-[var(--c-animation-cubic)];
+        }
+      }
+
+      &:hover {
+        .social-navigation__icon-link {
+          svg {
+            @apply fill-secondary;
+          }
+        }
+      }
+    }
+  }
+}

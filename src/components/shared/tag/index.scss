@@ -1,0 +1,13 @@
+.post-tag {
+  button {
+    @apply flex justify-center py-1 px-3
+      border-2 border-solid border-background-oppose rounded-2xl
+      md:mb-0;
+  }
+
+  &--active {
+    button {
+      @apply bg-primary border-primary text-background;
+    }
+  }
+}

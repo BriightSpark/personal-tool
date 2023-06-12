@@ -1,0 +1,35 @@
+/**
+  * CORE COMPONENTS
+  */
+@import './_core/select';
+@import './_core/input';
+@import './_core/checkbox';
+@import './_core/button';
+
+/**
+  * TEMPLATE COMPONENTS
+  */
+@import './template/header';
+@import './template/breadcrumbs';
+@import './template/side-nav';
+@import './template/social-nav';
+@import './template/scroll-top';
+@import './template/easter-egg';
+
+@import './shared/tag';
+@import './shared/container';
+@import './shared/date';
+
+/**
+  * TOOLS COMPONENTS
+  */
+@import './game-tools/number-guesser';
+@import './ecommerce-tool/discount-calculator';
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

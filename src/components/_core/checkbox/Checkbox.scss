@@ -1,0 +1,13 @@
+.form-checkbox-wrap {
+  @apply flex;
+
+  input[type=checkbox]:focus {
+    &+ .form-checkbox-label:before {
+      @apply outline-dashed outline-background-revert outline-1 outline-offset-1;
+    }
+  }
+}
+
+.form-checkbox {
+  @apply w-[22px] min-w-[22px] h-[22px] mr-3;
+}

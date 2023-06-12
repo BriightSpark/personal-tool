@@ -1,0 +1,27 @@
+@mixin slide (
+  $from: 'left',
+  $primary-color: var(--c-primary-color),
+  $secondary-color: var(--c-secondary-color),
+  $third-color: var(--c-background-oppose-color), $width: 300%,
+  $transition-duration: $animation-speed
+) {
+  @apply block absolute top-0 h-full;
+  width: $width;
+  transition: transform $animation-speed-slide ease-in-out;
+  background: linear-gradient(to right, $primary-color 33%, $secondary-color 0, $secondary-color 66%, $third-color 0, $third-color 100%);
+
+  @if( $from == 'left' ) {
+    @apply left-0;
+  }
+  @else {
+    @apply right-0;
+  }
+}
+
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {Style}           - text-shadow
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}

@@ -1,0 +1,39 @@
+.item-input-wrapper {
+  &:not(:nth-last-child(2)) {
+    @apply border-b border-solid border-gray-500 pb-5;
+  }
+
+  .item-input {
+    @apply flex flex-col gap-5;
+    @apply md:flex-row;
+
+    &__text {
+      @apply flex md:flex-col;
+    }
+
+    &__label {
+      @apply flex flex-1 items-center;
+    }
+
+    &__input-wrapper {
+      @apply flex gap-5;
+    }
+
+    &__input {
+      @apply flex-[2];
+    }
+
+    &__checkbox-wrapper {
+      @apply flex flex-row items-center justify-center md:mt-4;
+    }
+
+    &__checkbox {
+      @apply w-[22px] min-w-[22px] h-[22px] mr-3;
+    }
+
+    &__remove {
+      @apply w-full h-10 flex justify-center items-center rounded-full border border-solid border-gray-400;
+      @apply md:w-10 md:min-w-[40px];
+    }
+  }
+}

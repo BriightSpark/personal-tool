@@ -1,0 +1,45 @@
+.calculation-result {
+  @apply w-full mt-16;
+
+  table {
+    @apply w-full;
+
+    tr {
+      @apply flex flex-wrap w-full py-2;
+      
+      th {
+        @apply flex p-2 justify-center items-center;
+      }
+    }
+  }
+
+  tr:nth-child(odd) {
+    @apply bg-gray-100;
+  }
+
+  tr:first-child {
+    @apply bg-gray-400;
+  }
+
+
+  &__heading {
+    @apply text-center mb-8;
+  }
+
+  &__item {
+    @apply flex-[2];
+  }
+
+  &__price, &__quantity, &__percentage, &__amount, &__total {
+    @apply flex-1;
+  }
+
+}
+
+.dark {
+  .calculation-result {
+    tr:nth-child(odd) {
+      @apply bg-gray-600;
+    }
+  }
+}

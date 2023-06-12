@@ -1,0 +1,32 @@
+.header {
+  @apply relative flex flex-row justify-between p-mobile-gutter z-50 w-full max-w-screen-2xl mx-auto pointer-events-none bg-transparent;
+  @apply md:top-0 md:p-gutter;
+
+  .header__image-wrapper {
+    @apply h-16 w-16 z-50 pointer-events-auto;
+    @apply md:h-20 md:w-20;
+
+    svg {
+      @apply transition-all stroke-primary stroke-[5px];
+    }
+
+    &:hover {
+      svg {
+        @apply fill-white stroke-secondary;
+      }
+    }
+  }
+
+  > a {
+    @apply flex justify-center items-center cursor-pointer pointer-events-auto;
+  }
+
+  .header__navigation-bar {
+    @apply flex gap-2 z-50 mr-3 pointer-events-auto;
+  }
+}
+
+.header-absolute {
+  @apply absolute py-3 px-mobile-gutter left-0 right-0;
+  @apply md:px-gutter;
+}

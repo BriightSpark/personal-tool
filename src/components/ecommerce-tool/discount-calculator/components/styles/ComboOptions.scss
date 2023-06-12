@@ -1,0 +1,12 @@
+.combo-options {
+  @apply md:pl-[calc(23%)];
+
+  &__controls {
+    @apply flex flex-col justify-start my-3 gap-4;
+    @apply md:flex-row;
+  }
+
+  &__error {
+    @apply text-game-red;
+  }
+}

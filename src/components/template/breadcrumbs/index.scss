@@ -1,0 +1,28 @@
+.breadcrumbs-container {
+  @apply container px-5 py-4 m-auto;
+
+  ol {
+    li {
+      @apply inline-flex text-lg;
+      @apply md:text-xl;
+    }
+
+    .breadcrumbs-item {
+      @apply text-background-oppose hover:text-primary;
+    }
+  
+    .breadcrumbs-active {
+      @apply hover:text-secondary;
+    }
+
+    > :not(:last-child) {
+      @apply mr-2;
+      @apply md:mr-4;
+
+      &:after {
+        content: '-';
+        @apply ml-4 text-background-oppose;
+      }
+    }
+  }
+}

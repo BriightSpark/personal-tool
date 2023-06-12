@@ -1,0 +1,28 @@
+.records {
+  @apply xl:absolute xl:w-[300px] xl:mx-[30px] xl:right-[-360px] xl:h-full;
+
+  &__wrapper {
+    @apply text-center border-2 border-solid border-background-oppose rounded-2xl;
+    @apply xl:sticky xl:top-8;
+
+    .records__title {
+
+    }
+
+    .records__record {
+      @apply flex flex-col;
+      
+      .record {
+        @apply flex w-full;
+
+        &__number, &__type {
+          @apply flex flex-1 justify-center gap-3 items-center mb-0;
+
+          > * {
+            @apply mb-0;
+          }
+        }
+      }
+    }
+  }
+}

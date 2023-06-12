@@ -1,0 +1,11 @@
+.form-group {
+  .form-select {
+    @apply text-lg font-normal outline-none block w-full h-12 px-5 rounded-lg text-primary appearance-none;
+    @apply border-solid border border-gray-400 bg-background;
+    @apply bg-no-repeat bg-select;
+  }
+  
+  .form-select ~ .form-label {
+    @apply top-0 left-0;
+  }
+}

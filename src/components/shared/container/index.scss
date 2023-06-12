@@ -1,0 +1,31 @@
+.bg-page-gradient {
+  $primary-color: #FD1056;
+  $secondary-color: #019E86;
+  $bg-color: #fff;
+  $bg-revert-color: #1D1D1D;
+
+  &::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(0deg, $bg-color 0%, rgba($bg-revert-color, 0.005) 27.97%),
+      linear-gradient(244.75deg, rgba($primary-color, 0.2) -10.92%, $bg-color 65.13%, rgba($secondary-color, 0.3) 110.9%);
+    height: 100vh;
+  }
+}
+
+.dark .bg-page-gradient {
+  $primary-color: #019E86;
+  $secondary-color: #FD1056;
+  $bg-color: #1D1D1D;
+  $bg-revert-color: #fff;
+
+  &::before {
+    background: linear-gradient(0deg, $bg-color 0%, rgba($bg-revert-color, 0.005) 27.97%),
+      linear-gradient(244.75deg, rgba($primary-color, 0.2) -10.92%, $bg-color 65.13%, rgba($secondary-color, 0.3) 110.9%);
+  }
+}

@@ -1,0 +1,21 @@
+.number-filter {
+  @apply text-center;
+
+  &__title {
+    @apply mb-4;
+  }
+
+  &__buttons-wrapper {
+    @apply flex flex-col gap-3;
+    @apply md:gap-5;
+
+    .number-filter__buttons {
+      @apply flex flex-wrap gap-3;
+      @apply md:gap-5;
+      
+      .number-filter__button {
+        @apply flex-1 py-3 border border-solid border-background-oppose rounded-full;
+      }
+    }
+  }
+}

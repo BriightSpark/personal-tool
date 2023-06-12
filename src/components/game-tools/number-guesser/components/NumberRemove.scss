@@ -1,0 +1,20 @@
+.number-remove {
+  @apply text-center;
+
+  &__title {
+    @apply mb-4;
+  }
+
+  &__buttons-wrapper {
+    @apply flex flex-col gap-2;
+
+    .number-remove__buttons {
+      @apply flex flex-wrap gap-2;
+      
+      .number-remove__button {
+        @apply py-3 border border-solid border-background-oppose rounded-full w-[calc(100%/3_-_6px)];
+        @apply md:w-auto md:flex-1;
+      }
+    }
+  }
+}

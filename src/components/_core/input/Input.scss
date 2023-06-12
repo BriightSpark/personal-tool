@@ -1,0 +1,41 @@
+.form-group {
+  @apply block w-full relative pt-8 pb-4 mb-0;
+
+  .form-control {
+    @apply text-lg w-full mb-1 py-3 px-5 bg-transparent h-[48px] text-background-revert relative z-10;
+    @apply border border-solid border-gray-400 rounded-lg outline-none;
+    @apply transition-all ease-[var(--c-animation-cubic)] duration-[var(--b-animation-speed)];
+  }
+
+  .form-label {
+    @apply text-xl absolute top-10 left-5 w-[calc(100%_-_70px)] z-[2] text-background-revert bg-background normal-case cursor-text transition-all;
+    @apply ease-[var(--c-animation-cubic)] duration-[var(--b-animation-speed)];
+  }
+
+  .form-control:-webkit-autofill,
+  .form-control:-webkit-autofill:hover {
+    -webkit-text-fill-color: var(--c-background-oppose-color);
+    box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .form-control:not(:placeholder-shown) ~ .form-label {
+    @apply top-0 left-0 text-background-revert;
+  }
+
+  .form-control:focus ~ .form-label {
+    @apply top-0 left-0;
+  }
+
+  .form-error--error-message {
+    @apply text-game-red;
+  }
+}
+
+.form-group--static {
+  @apply block w-full relative mb-0 p-0;
+
+  .form-label--static {
+    @apply text-xl relative w-[calc(100%_-_70px)] z-[2] text-background-revert bg-background normal-case cursor-text transition-all;
+  }
+}

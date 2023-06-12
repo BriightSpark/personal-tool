@@ -1,0 +1,62 @@
+.number-suggestion {
+  @apply text-center;
+  
+  &__title {
+    @apply text-3xl mb-4;
+  }
+
+  &__input-wrapper {
+    @apply block w-full relative pt-12 pb-4;
+
+    .number-suggestion__number {
+      @apply w-full mb-1 py-3 px-5 bg-transparent h-12 rounded-full outline-none relative z-10;
+      @apply text-5xl text-primary text-center;
+    }
+
+    .number-suggestion__number:-webkit-autofill,
+    .number-suggestion__number:-webkit-autofill:hover {
+      @apply shadow-transparent transition-colors ease-[var(--c-animation-cubic)];
+
+      box-shadow: 0 0 0 1000px transparent inset;
+    }
+
+    .number-suggestion__number:placeholder-shown::placeholder {
+      @apply text-xl transition-all ease-[var(--c-animation-cubic)];
+    }
+
+    .number-suggestion__number:not(:placeholder-shown),
+    .number-suggestion__number:focus {
+      &::placeholder {
+        @apply text-gray-400;
+      }
+
+      & ~ .number-suggestion__label {
+        @apply top-0 left-0 bg-transparent;
+
+        &::before {
+          @apply inline opacity-100;
+        }
+
+        &::after {
+          @apply hidden
+        }
+      }
+    }
+
+    .number-suggestion__label {
+      @apply absolute w-full top-[43px] text-center left-0 cursor-text normal-case z-20 pointer-events-none bg-background;
+      @apply text-5xl text-secondary text-center;
+      @apply transition-all ease-[var(--c-animation-cubic)] duration-[var(--b-animation-speed)];
+
+      &::before {
+        @apply text-xl text-background-revert hidden opacity-0 transition-all;
+        content: var(--gt--suggest-label);
+      }
+
+      &::after {
+        @apply animate-idling ml-1 border-r border-solid border-background-revert h-[80%];
+        content: "";
+      }
+    }
+  }
+}

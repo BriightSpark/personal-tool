@@ -1,0 +1,106 @@
+////////////////////
+// RAW COLOR
+////////////////////
+$black: 29, 29, 29;
+$white: 255, 255, 255;
+$zinc-500: #515151;
+$primary-color: #FD1056;
+$secondary-color: #019E86;
+
+
+////////////////////
+// SPACING
+////////////////////
+$spacing-5: rem(5px);
+$spacing-10: rem(10px);
+$spacing-15: rem(15px);
+$spacing-20: rem(20px);
+$spacing-25: rem(25px);
+$spacing-30: rem(30px);
+$spacing-35: rem(35px);
+$spacing-40: rem(40px);
+$spacing-50: rem(50px);
+$spacing-60: rem(60px);
+$spacing-65: rem(65px);
+$spacing-70: rem(70px);
+$spacing-100: rem(100px);
+
+
+////////////////////
+// SCREENS
+////////////////////
+$screen-s: 375px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1440px;
+
+
+////////////////////
+// BORDER
+////////////////////
+$border-radius-base: rem(6px);
+$border-radius-8: rem(8px);
+$border-radius-16: rem(16px);
+
+
+////////////////////
+// GUTTER
+////////////////////
+$screen-gutter: $spacing-25;
+$screen-gutter-mobile: $spacing-15;
+$screen-max-width: $screen-xl;
+$screen-min-width: 75%;
+
+////////////////////
+// SVGs
+////////////////////
+$svg-width: rem(20px);
+$svg-height: rem(20px);
+$svg-animation-speed: 250ms;
+$animation-speed: 0.4s;
+$animation-speed-slide: 1s;
+
+
+////////////////////
+// LAYOUT
+////////////////////
+%layout-base {
+  display: grid;
+  grid-auto-rows: auto;
+  margin: auto;
+}
+
+%layout-6-6 {
+  @extend %layout-base;
+  grid-template-columns: unset; 
+  @media (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+%layout-6-6-mobile {
+  @extend %layout-base;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-5;
+  padding: 0 $spacing-65 $spacing-35;
+  
+  @media (min-width: $screen-md) {
+    gap: $spacing-10;
+  }
+}
+
+%layout-5-7 {
+  @extend %layout-base;
+  grid-template-columns: unset; 
+  @media (min-width: $screen-md) {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+%layout-7-5 {
+  @extend %layout-base;
+  grid-template-columns: unset; 
+  @media (min-width: $screen-md) {
+    grid-template-columns: 7fr 5fr;
+  }
+}

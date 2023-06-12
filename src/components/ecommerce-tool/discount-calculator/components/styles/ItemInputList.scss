@@ -1,0 +1,12 @@
+.item-input-list {
+  @apply flex flex-col gap-5 p-6;
+  @apply rounded-md border border-solid border-gray-400 mt-6;
+
+  &__title {
+    @apply text-center mb-5;
+  }
+
+  &__error {
+    @apply text-game-red text-center;
+  }
+}

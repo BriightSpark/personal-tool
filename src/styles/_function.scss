@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+@function rem($size) {
+  @return  math.div($size, 16px) * 1rem;
+}
+
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+   @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}

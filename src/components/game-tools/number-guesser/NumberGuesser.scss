@@ -1,0 +1,17 @@
+.number-guess-wrapper {
+  @apply relative flex flex-col gap-12 max-w-2xl m-auto mb-10;
+
+  button {
+    &:disabled {
+      @apply bg-gray-300 text-background border-gray-300;
+      @apply hover:bg-gray-300;
+    }
+  }
+}
+
+.reset-button, .revert-button {
+  @apply text-2xl py-2 border border-solid rounded-full;
+  @apply text-background-revert border-background-revert;
+  @apply hover:bg-primary hover:border-primary hover:text-background;
+  @apply md:w-2/3 md:m-auto;
+}

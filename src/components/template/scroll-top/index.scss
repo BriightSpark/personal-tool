@@ -1,0 +1,13 @@
+.top-button {
+  @apply fixed p-2 bottom-8 right-8 opacity-100 rounded transition-all ease-[var(--c-animation-cubic)]
+    border-2 border-solid border-primary hover:border-background-revert
+    bg-background hover:bg-background-revert;
+  
+  .top-icon {
+    @apply w-5 h-5;
+  }
+}
+
+.top-hidden {
+  @apply opacity-0;
+}
