@@ -22,7 +22,7 @@ export const SideNavigation = () => {
         <span className='sidenav__navlink-background'></span>
         <Link
           className='sidenav__navlink'
-          href={ route?.path }
+          href={ `${ process.env.NEXT_PUBLIC_MAIN_SITE }${ route?.path }` }
           onClick={ toggleNavigation }
           scroll={ false }
         >{ t( route?.label )?.toUpperCase() }</Link>
