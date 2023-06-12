@@ -17,7 +17,7 @@ type AppProps = {
 
 function MyApp( { Component, pageProps, router }: AppProps ) {
 
-  const url = `https://giabaotran.dev${ router.route }`;
+  const url = `https://tool.giabaotran.dev${ router.route }`;
 
   useEffect( () => {
     sendPageView();
