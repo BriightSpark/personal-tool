@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { NumberGuesserContext } from '../NumberGuesser';
 import { filterSingleDigit } from '../utils';
 import { cursorEnter, cursorExit } from 'library/utils/mouse-hover';
+import { Button } from '@briightspark/ui-components';
 
 export default function NumberRmove() {
   const { t } = useTranslation();
@@ -24,15 +25,15 @@ export default function NumberRmove() {
       <p className={ 'number-remove__title' }>{ t( 'remove-number' ) }</p>
       <div className={ 'number-remove__buttons-wrapper' }>
         <div className={ 'number-remove__buttons' }>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 1 ) }>1</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 2 ) }>2</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 3 ) }>3</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 4 ) }>4</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 5 ) }>5</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 6 ) }>6</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 7 ) }>7</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 8 ) }>8</button>
-          <button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 9 ) }>9</button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 1 ) }>1</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 2 ) }>2</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 3 ) }>3</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 4 ) }>4</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 5 ) }>5</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 6 ) }>6</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 7 ) }>7</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 8 ) }>8</Button>
+          <Button className={ 'number-remove__button' } disabled={ disabled } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => filterList( 9 ) }>9</Button>
         </div>
       </div>
     </div>

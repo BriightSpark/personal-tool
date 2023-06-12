@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'next-i18next';
 import { NumberGuesserContext } from '../NumberGuesser';
 import { cursorEnter, cursorExit } from 'library/utils/mouse-hover';
+import { Button } from '@briightspark/ui-components';
 
 export default function RevertLastStep() {
   const { t } = useTranslation();
@@ -17,6 +18,6 @@ export default function RevertLastStep() {
   };
 
   return (
-    <button className='reset-button' onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => revertState() } disabled={ records?.length === 0 }>{ t( 'revert-last-step' ) }</button>
+    <Button className='reset-button' onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } onClick={ () => revertState() } disabled={ records?.length === 0 }>{ t( 'revert-last-step' ) }</Button>
   );
 }

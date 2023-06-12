@@ -4,6 +4,7 @@ import { NumberGuesserContext } from '../NumberGuesser';
 import { applyFilter } from '../utils';
 import { random } from 'lodash';
 import { cursorEnter, cursorExit } from 'library/utils/mouse-hover';
+import { Button } from '@briightspark/ui-components';
 
 export default function NumberFilter() {
   const { t } = useTranslation();
@@ -42,37 +43,37 @@ export default function NumberFilter() {
       <p className={ 'number-filter__title' }>{ t( 'apply-filter' ) }</p>
       <div className={ 'number-filter__buttons-wrapper' }>
         <div className={ 'number-filter__buttons' }>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 0 } ) }>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 0 } ) }>
             <span className='text-game-red'>×</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 1, green: 1 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 1, green: 1 } ) }>
             1 <span className='text-game-green'>○</span> 1 <span className='text-game-yellow'>△</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 2, green: 1 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 2, green: 1 } ) }>
             1 <span className='text-game-green'>○</span> 2 <span className='text-game-yellow'>△</span>
-          </button>
+          </Button>
         </div>
         <div className={ 'number-filter__buttons' }>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 1, green: 0 } ) }>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 1, green: 0 } ) }>
             0 <span className='text-game-green'>○</span> 1 <span className='text-game-yellow'>△</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 2, green: 0 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 2, green: 0 } ) }>
             0 <span className='text-game-green'>○</span> 2 <span className='text-game-yellow'>△</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 3, green: 0 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 3, green: 0 } ) }>
             0 <span className='text-game-green'>○</span> 3 <span className='text-game-yellow'>△</span>
-          </button>
+          </Button>
         </div>
         <div className={ 'number-filter__buttons' }>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 1 } ) }>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 1 } ) }>
             1 <span className='text-game-green'>○</span> 0 <span className='text-game-yellow'>△</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 2 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 2 } ) }>
             2 <span className='text-game-green'>○</span> 0 <span className='text-game-yellow'>△</span>
-          </button>
-          <button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 3 } ) }>
+          </Button>
+          <Button onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className={ 'number-filter__button' } disabled={ disabled } onClick={ () => filterList( { yellow: 0, green: 3 } ) }>
             3 <span className='text-game-green'>○</span> 0 <span className='text-game-yellow'>△</span>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

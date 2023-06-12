@@ -11,6 +11,7 @@ import RevertLastStep from './components/RevertLastStep';
 import Records from './components/Records';
 import NumberList from './components/NumberList';
 import { cursorEnter, cursorExit } from 'library/utils/mouse-hover';
+import { Button } from '@briightspark/ui-components';
 
 interface NumberContextI {
   numberList: number[][],
@@ -70,7 +71,7 @@ export default function NumberGuesser() {
   return (
     <NumberGuesserContext.Provider value={ contextValue }>
       <div className={ 'number-guess-wrapper' }>
-        <button className='reset-button' onClick={ () => resetState() } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>{ t( 'restart' ) }</button>
+        <Button className='reset-button' onClick={ () => resetState() } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>{ t( 'restart' ) }</Button>
         <NumberSuggestion />
         <NumberFilter />
         <NumberRemove />
