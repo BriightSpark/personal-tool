@@ -6,6 +6,7 @@ import { ROUTES } from 'library/constants';
 import Link from 'components/shared/link';
 import Button from 'components/shared/button';
 import { EasterEgg } from '../easter-egg';
+import { Text } from '@briightspark/ui-components';
 
 export const SideNavigation = () => {
 
@@ -25,7 +26,11 @@ export const SideNavigation = () => {
           href={ `${ process.env.NEXT_PUBLIC_MAIN_SITE }${ route?.path }` }
           onClick={ toggleNavigation }
           scroll={ false }
-        >{ t( route?.label )?.toUpperCase() }</Link>
+        >
+          <Text tag='a' type='p2'>
+            { t( route?.label )?.toUpperCase() }
+          </Text>
+        </Link>
       </div>
     );
   } );

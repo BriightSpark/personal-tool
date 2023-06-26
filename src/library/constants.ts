@@ -1,6 +1,3 @@
-export const HOME_OG_IMAGE_URL =
-  'https://codelearn.io/Upload/Blog/khi-nao-thi-khong-nen-code-63729193021.3229.jpg';
-
 export const ROUTES = [
   {
     path: '/',

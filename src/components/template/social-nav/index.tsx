@@ -8,6 +8,7 @@ export const SocialNavigation = () => {
   const LINKEDIN_URL = 'https://www.linkedin.com/in/gia-bao-tran/';
   const GITHUB_URL = 'https://github.com/BriightSpark';
   const INSTAGRAM_URL = 'https://www.instagram.com/billytran186/';
+  const CONTACT_ME_PAGE = `${ process.env.NEXT_PUBLIC_MAIN_SITE }/contact`;
 
   return (
     <nav className='social-navigation'>
@@ -30,6 +31,11 @@ export const SocialNavigation = () => {
         <li className='social-navigation__icon social-navigation__instagram'>
           <a className='social-navigation__icon-link' href={ INSTAGRAM_URL } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>
             <ReactSVG src='/svg/instagram.svg' />
+          </a>
+        </li>
+        <li className='social-navigation__icon social-navigation__email'>
+          <a className='social-navigation__icon-link' href={ CONTACT_ME_PAGE } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>
+            <ReactSVG src='/svg/email.svg' />
           </a>
         </li>
       </ul>
