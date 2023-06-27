@@ -43,10 +43,6 @@
         @apply relative w-3/4 mx-auto my-0 overflow-hidden text-center;
         @apply md:text-left;
 
-        a {
-          @extend %font-navigation;
-        }
-
         .sidenav__navlink-background {
           @include slide('left', var(--c-primary-color), var(--c-secondary-color), $black, 303%);
           @apply -z-10 -translate-x-105%;
