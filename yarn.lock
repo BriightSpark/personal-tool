@@ -1081,10 +1081,10 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
-"@briightspark/ui-components@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@briightspark/ui-components/-/ui-components-0.9.0.tgz#14a634df1d3205058b470909c2407b9fc2dab107"
-  integrity sha512-+yhc/LDwF3YbqC7ghXhRHqmWSFdiZdD+/LysF4a7SHnFuXgK0mFaRViI08430heUGdJhMEWmlVPTBh9dq67d3w==
+"@briightspark/ui-components@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@briightspark/ui-components/-/ui-components-0.16.0.tgz#a2b1b6f78ba2d72e86f6f7d32dd4414907e6b4d2"
+  integrity sha512-onYRj2IabDHO7AEGVJEUh+0Jzz32dn2CxGpxqUwbWxUzUmSM2GtEKwbh+nPt15rbp/Wn9DevZ0udmVjAp1KEAw==
   dependencies:
     "@fortawesome/free-brands-svg-icons" "^6.4.0"
     "@fortawesome/free-solid-svg-icons" "^6.4.0"

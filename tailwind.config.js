@@ -35,10 +35,14 @@ module.exports = {
         tight: 1.2
       },
       fontSize: {
+        none: '0',
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem'
+      },
+      fontFamily: {
+        logo: ['Druk Wide Web', 'Archer SSm']
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
@@ -68,6 +72,9 @@ module.exports = {
       },
       backgroundImage: {
         select: `url("data:image/svg+xml,%3Csvg fill='%313638' viewBox='0 0 10 7' id='play-outline' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.278 1.746c-.37-.397-.37-1.028 0-1.425.387-.415 1.028-.415 1.415 0l3.302 3.542L8.306.31c.388-.415 1.03-.415 1.416 0 .188.202.278.461.278.713 0 .252-.09.511-.278.713L5.767 5.979l-.003.004c-.01.015-.03.04-.056.07-.387.414-1.029.415-1.416 0L.278 1.745z'%3E%3C/path%3E%3C/svg%3E")`
+      },
+      borderWidth: {
+        arrow: '0 4px 4px 0'
       }
     }
   },

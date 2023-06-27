@@ -5,22 +5,29 @@ import { ThemeToggle } from 'components/template/theme-toggle';
 import { LocaleToggle } from '../locale-toggle';
 import cn from 'classnames';
 import { cursorEnter, cursorExit } from 'library/utils/mouse-hover';
+import { Text } from '@briightspark/ui-components';
 
 interface HeaderModel {
   absoluteHeader?: boolean
+  fixedHeader?: boolean
 }
 
-export const Header = ( { absoluteHeader = false } : HeaderModel ) => {
+export const Header = ( { absoluteHeader = false, fixedHeader = false } : HeaderModel ) => {
 
   return (
-    <header className={ cn( 'header', { 'header-absolute': absoluteHeader } ) }>
-      <Link className='header__image-wrapper' href={ process.env.NEXT_PUBLIC_MAIN_SITE || '/' } scroll={ false }>
-        <a onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Gia Bao Tran</a>
-      </Link>
-      <div className='header__navigation-bar'>
-        <LocaleToggle />
-        <ThemeToggle />
-        <SideNavigation />
+    <header className={ cn( 'header-wrapper', { 'header--absolute': absoluteHeader }, { 'header--fixed': fixedHeader } ) }>
+      <div className={ cn( 'header' ) }>
+        <Link className='header__image-wrapper' href='/' scroll={ false }>
+          <Text tag='a' type='p1-bold' onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className='header__logo'>
+            <span>GIA BAO</span>
+            <span>TRAN</span>
+          </Text>
+        </Link>
+        <div className='header__navigation-bar'>
+          <LocaleToggle />
+          <ThemeToggle />
+          <SideNavigation />
+        </div>
       </div>
     </header>
   );

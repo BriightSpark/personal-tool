@@ -27,7 +27,7 @@ export const SideNavigation = () => {
           onClick={ toggleNavigation }
           scroll={ false }
         >
-          <Text tag='a' type='p2'>
+          <Text tag='a' type='h1' className='sidenav__navlink-link'>
             { t( route?.label )?.toUpperCase() }
           </Text>
         </Link>

@@ -26,6 +26,27 @@
 ////////////////////
 @import '../components';
 
+////////////////////
+// FONTS
+////////////////////
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url("../../public/fonts/DrukWide-Medium-Web.eot");
+  src: url("../../public/fonts/DrukWide-Medium-Web.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/DrukWide-Medium-Web.woff2") format("woff2"), url("../../public/fonts/DrukWide-Medium-Web.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url("../../public/fonts/DrukWide-Super-Web.eot");
+  src: url("../../public/fonts/DrukWide-Super-Web.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/DrukWide-Super-Web.woff2") format("woff2"), url("../../public/fonts/DrukWide-Super-Web.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+
 html {
   --c-primary-color: #{$secondary-color};
   --c-secondary-color: #{$primary-color};

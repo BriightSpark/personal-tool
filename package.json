@@ -11,7 +11,7 @@
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "dependencies": {
-    "@briightspark/ui-components": "^0.9.0",
+    "@briightspark/ui-components": "^0.16.0",
     "@contentful/rich-text-react-renderer": "^15.4.0",
     "@deadcoder0904/react-typical": "^0.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",

@@ -1,32 +1,43 @@
-.header {
-  @apply relative flex flex-row justify-between p-mobile-gutter z-50 w-full max-w-screen-2xl mx-auto pointer-events-none bg-transparent;
-  @apply md:top-0 md:p-gutter;
+.header-wrapper {
+  @apply relative z-50 flex justify-center;
 
-  .header__image-wrapper {
-    @apply h-16 w-16 z-50 pointer-events-auto;
-    @apply md:h-20 md:w-20;
+  .header {
+    @apply relative flex flex-row justify-between pointer-events-none w-full max-w-screen-2xl p-mobile-gutter;
+    @apply md:top-0 md:p-gutter;
 
-    svg {
-      @apply transition-all stroke-primary stroke-[5px];
-    }
+    .header__image-wrapper {
+      @apply h-16 w-16 z-50 pointer-events-auto;
+      @apply md:h-20 md:w-20;
 
-    &:hover {
       svg {
-        @apply fill-white stroke-secondary;
+        @apply transition-all stroke-primary stroke-[5px];
+      }
+
+      &:hover {
+        svg {
+          @apply fill-white stroke-secondary;
+        }
       }
     }
-  }
 
-  > a {
-    @apply flex justify-center items-center cursor-pointer pointer-events-auto;
-  }
+    > a {
+      @apply flex justify-center cursor-pointer pointer-events-auto;
+    }
 
-  .header__navigation-bar {
-    @apply flex gap-2 z-50 mr-3 pointer-events-auto;
+    .header__navigation-bar {
+      @apply flex gap-2 z-50 mr-3 pointer-events-auto;
+    }
+
+    &__logo {
+      @apply flex flex-col items-start font-logo transition-all hover:text-transparent hover:font-outline-2 text-4xl;
+    }
   }
 }
 
-.header-absolute {
-  @apply absolute py-3 px-mobile-gutter left-0 right-0;
-  @apply md:px-gutter;
+.header--absolute {
+  @apply absolute left-0 right-0 top-0 bg-background border-solid border-gray-400 border-b;
+}
+
+.header--fixed {
+  @apply fixed left-0 right-0 top-0 border-solid border-gray-100 border-b bg-background;
 }
