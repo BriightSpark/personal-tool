@@ -24,6 +24,7 @@
   */
 @import './game-tools/number-guesser';
 @import './ecommerce-tool/discount-calculator';
+@import './utility-tool/expense-share-calculator';
 
 @layer base {
   input[type="number"]::-webkit-inner-spin-button,

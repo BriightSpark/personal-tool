@@ -1,0 +1,20 @@
+.expense-calculator {
+  @apply p-4 md:p-10 lg:px-16;
+
+  &__header {
+    @apply flex flex-row justify-between;
+
+    .expense-calculator__heading {
+      @apply text-5xl font-semibold;
+    }
+  }
+
+  &__new-expenses {
+    @apply flex flex-row gap-4;
+  }
+
+  &__remove-expense_btn {
+    @apply absolute top-1/2 -translate-y-1/2 right-4
+      opacity-0 pointer-events-none transition-opacity;
+  }
+}

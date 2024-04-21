@@ -1,0 +1,27 @@
+
+.expense-calculator__table-body {
+  @apply divide-y divide-gray-300 bg-white;
+
+  &-content {
+    @apply even:bg-gray-50;
+
+    &-description {
+      @apply relative flex flex-col gap-2 min-w-[400px];
+
+      input[type="text"] {
+        @apply text-lg;
+      }
+
+      &:hover {
+        button {
+          @apply opacity-100 pointer-events-auto;
+        }
+      }
+    }
+
+    &-value {
+      @apply max-w-[200px];
+    }
+  }
+}
+

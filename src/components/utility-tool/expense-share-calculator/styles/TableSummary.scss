@@ -1,0 +1,38 @@
+.table-summary {
+  @apply mt-10 md:mt-20;
+
+  &__heading {
+    @apply text-2xl font-bold mb-6 md:mb-10;
+  }
+
+  &__users {
+    @apply flex flex-wrap gap-10;
+  }
+
+  &__user {
+    @apply
+      border
+      border-solid
+      border-background-oppose
+      p-4 md:p-10
+      rounded-2xl
+      shadow-md
+      md:w-[calc((100%_/_3)_-_(40px_/_3_*_2))];
+
+    &-name {
+      @apply text-xl font-semibold mb-4;
+    }
+
+    &-expenses {
+      @apply flex flex-col gap-2;
+
+      &-total {
+        @apply text-xl mt-4;
+      }
+    }
+
+    &-expense {
+      @apply flex justify-between;
+    }
+  }
+}

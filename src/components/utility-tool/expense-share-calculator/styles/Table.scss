@@ -1,0 +1,11 @@
+.expense-calculator__table {
+  @apply min-w-full divide-y divide-gray-300 my-5 md:my-10 overflow-auto;
+
+  th, td {
+    @apply even:bg-gray-200 py-2 px-4 ;
+  }
+
+  input {
+    @apply outline-none border-0 bg-transparent;
+  }
+}

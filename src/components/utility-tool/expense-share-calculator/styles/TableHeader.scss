@@ -1,0 +1,27 @@
+.expense-calculator__table-head {
+  &-empty-col {
+    @apply w-[25%];
+  }
+
+  &-user {
+    @apply max-w-[100px];
+
+    &-col {
+      @apply flex flex-row justify-between w-full;
+
+      input {
+        @apply w-full
+      }
+
+      button {
+        @apply md:opacity-0 md:pointer-events-none md:transition-opacity;
+      }
+
+      &:hover {
+        button {
+          @apply opacity-100 pointer-events-auto;
+        }
+      }
+    }
+  }
+}
