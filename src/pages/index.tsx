@@ -12,9 +12,16 @@ export default function Index( { preview }: { preview: any} ) {
   return (
     <>
       <LandingLayout preview={ preview } meta={{ pageName: t( 'meta--game-tools' ) }}>
-        <Container>
-          <h2>{ t( 'game-on' ) }</h2>
-          <Link href={ '/game/password-guesser' } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Password Guesser</Link>
+        <Container className='flex flex-col gap-10'>
+          <div className='flex flex-col gap-2'>
+            <h2 className='text-3xl font-bold mb-4'>{ t( 'game-on', 'Game on!' ) }</h2>
+            <Link href={ '/game/password-guesser' } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Password Guesser</Link>
+          </div>
+          <div className='flex flex-col gap-2'>
+            <h2 className='text-3xl font-bold mb-4'>{ t( 'util-tool', 'Utilities' ) }</h2>
+            <Link href={ '/utils/discount-calculator' } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Discount calculator</Link>
+            <Link href={ '/utils/cost-sharing' } onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit }>Cost sharing calulator</Link>
+          </div>
         </Container>
       </LandingLayout>
     </>

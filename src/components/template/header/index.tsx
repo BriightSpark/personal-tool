@@ -17,7 +17,7 @@ export const Header = ( { absoluteHeader = false, fixedHeader = false } : Header
   return (
     <header className={ cn( 'header-wrapper', { 'header--absolute': absoluteHeader }, { 'header--fixed': fixedHeader } ) }>
       <div className={ cn( 'header' ) }>
-        <Link className='header__image-wrapper' href='/' scroll={ false }>
+        <Link className='header__image-wrapper' href='www.giabaotran.dev' scroll={ false }>
           <Text tag='a' type='p1-bold' onMouseEnter={ cursorEnter } onMouseLeave={ cursorExit } className='header__logo'>
             <span>GIA BAO</span>
             <span>TRAN</span>
