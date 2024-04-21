@@ -38,8 +38,8 @@ const ExpenseShareCalculator = () => {
         </table>
       </div>
       <div className='expense-calculator__new-expenses' >
-        <Button variant='primary' onClick={ () => onExpenseAdd( 'usage' ) }>Add Usage Expense</Button>
-        <Button variant='dark' onClick={ () => onExpenseAdd( 'equal' ) }>Add Equal Expense</Button>
+        <Button variant='primary' onClick={ () => onExpenseAdd( 'usage' ) }>Expense based on usage</Button>
+        <Button variant='dark' onClick={ () => onExpenseAdd( 'equal' ) }>Expense shared equally</Button>
       </div>
       <div>
         <TableSummary />
