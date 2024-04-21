@@ -63,7 +63,9 @@ export const ShareByUsage = ( {
       <td className='expense-calculator__table-body-content-description'>
         <input type='text' onChange={ ( e ) => handleDescriptionChange( e.target.value ) } value={ description } />
         <div>
-          A$ <input type='number' min='0' placeholder='Total cost of expense' onChange={ ( e ) => handleCostChange( Number( e.target.value ) ) } />
+          A$ <input type='number' min='0' placeholder='Total cost of expense' defaultValue={ expense.amount }
+            onChange={ ( e ) => handleCostChange( Number( e.target.value ) ) }
+          />
         </div>
         <button
           className='expense-calculator__remove-expense_btn'
@@ -75,6 +77,7 @@ export const ShareByUsage = ( {
           <td key={ u.id } className='expense-calculator__table-body-content-value'>
             <input
               type='number'
+              defaultValue={ usage[idx] }
               placeholder={ String( usage[idx] ) }
               onChange={ ( e ) => setUsage( [
                 ...usage.slice( 0, idx ),

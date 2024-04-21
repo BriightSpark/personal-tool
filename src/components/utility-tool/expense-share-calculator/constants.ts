@@ -1,0 +1,1 @@
+export const LOCAL_STORAGE_EXPENSE = 'expense_sharing_data';

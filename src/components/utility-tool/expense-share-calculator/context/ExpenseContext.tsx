@@ -2,6 +2,7 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import { v4 as uuidv4 } from 'uuid';
 
 import { Expense, ExpenseSplit, ExpenseType, IExpenseContext, TableType, User } from '../type';
+import { LOCAL_STORAGE_EXPENSE } from '../constants';
 
 
 export const ExpenseContext = createContext<IExpenseContext | undefined>( undefined );
@@ -16,9 +17,13 @@ export const ExpenseProvider = ( { children } : any ) => {
 
   /** Check if localStorage exist */
   useEffect( () => {
-    const localStageData = localStorage.getItem( 'expense-sharing-data' );
-    if ( localStageData ) {
-    // Parse data and replace table data
+    const localStorageData = localStorage.getItem( LOCAL_STORAGE_EXPENSE );
+
+    if ( localStorageData ) {
+      // const data = JSON.parse( localStorageData );
+
+      // setTable( data?.table || {} );
+      // setExpenseList( data?.expenseList || [] );
     }
     else {
       const user1 : User = { name: 'User 1', id: uuidv4() };
@@ -49,6 +54,12 @@ export const ExpenseProvider = ( { children } : any ) => {
       setExpenseList( [expense1, expense2] );
     }
   }, [] );
+
+  // useEffect( () => {
+  //   if ( expenseList.length && table.users.length && table.expenses.length ) {
+  //     localStorage.setItem( LOCAL_STORAGE_EXPENSE, JSON.stringify( { table: table, expenseList: expenseList } ) );
+  //   }
+  // }, [JSON.stringify( table ), JSON.stringify( expenseList ), JSON.stringify( updated )] );
 
   const findUserFromId = ( id: string ) : User | undefined => {
     return table.users.find( ( u ) => u.id === id );
