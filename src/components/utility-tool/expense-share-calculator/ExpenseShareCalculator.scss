@@ -10,7 +10,7 @@
   }
 
   &__new-expenses {
-    @apply flex flex-row gap-4;
+    @apply flex flex-col md:flex-row gap-4;
   }
 
   &__remove-expense_btn {

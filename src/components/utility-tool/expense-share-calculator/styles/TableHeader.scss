@@ -1,4 +1,8 @@
 .expense-calculator__table-head {
+  > tr {
+    @apply min-w-full border-b border-solid border-gray-300 my-5 md:my-10 overflow-auto;
+  }
+
   &-empty-col {
     @apply w-[25%];
   }
@@ -22,6 +26,14 @@
           @apply opacity-100 pointer-events-auto;
         }
       }
+    }
+  }
+}
+
+.dark {
+  .expense-calculator__table-head {
+    > tr {
+      @apply border-gray-600;
     }
   }
 }

@@ -1,11 +1,19 @@
 .expense-calculator__table {
-  @apply min-w-full divide-y divide-gray-300 my-5 md:my-10 overflow-auto;
+  @apply min-w-full my-5 md:my-10 overflow-auto;
 
   th, td {
-    @apply even:bg-gray-200 py-2 px-4 ;
+    @apply even:bg-gray-200 py-2 px-4;
   }
 
   input {
     @apply outline-none border-0 bg-transparent;
+  }
+}
+
+.dark {
+  .expense-calculator__table {
+    th,td { 
+      @apply even:bg-gray-700;
+    }
   }
 }
