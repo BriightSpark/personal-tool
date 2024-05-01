@@ -14,12 +14,14 @@
 @import 'keyframes';
 @import 'animations';
 @import 'mixin';
+@import 'react-calendar';
 
 ////////////////////
 // 3RD PARTY LIBRARY
 ////////////////////
 @import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 @import url('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css');
+@import "react-datepicker/dist/react-datepicker.css";
 
 ////////////////////
 // COMPONENTS

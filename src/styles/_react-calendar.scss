@@ -1,0 +1,25 @@
+.react-datepicker {
+  &-popper {
+    @apply transition-none;
+  }
+
+  &__header {
+    @apply bg-background-oppose;
+  }
+
+  &__current-month, &__day-name {
+    @apply text-white;
+  }
+
+  &__month {
+    @apply bg-background border-background-revert m-0 p-2;
+  }
+
+  &__day {
+    @apply text-background-revert;
+
+    &--selected {
+      @apply bg-primary text-white;
+    }
+  }
+}
